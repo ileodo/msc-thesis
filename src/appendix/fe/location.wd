@@ -1,0 +1,3 @@
+(location|venue|place|room|auditorium|hall)\s*:?
+(takes place|happens|is organized)\s+(at|in)?\s*:?
+where\s*:

@@ -1,0 +1,122 @@
+\documentclass[12pt]{ociamthesis}  % default square logo 
+%\documentclass[12pt,beltcrest]{ociamthesis} % use old belt crest logo
+%\documentclass[12pt,shieldcrest]{ociamthesis} % use older shield crest logo
+
+%load any additional packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{listings, multicol}
+\usepackage{xcolor, graphicx}
+\usepackage{geometry}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{booktabs}
+\usepackage{caption, subcaption}
+\usepackage[inline]{enumitem}
+\usepackage{qtree}
+\usepackage{hyperref}
+\usepackage{tablefootnote}
+
+
+%input macros (i.e. write your own macros file called mymacros.tex 
+%and uncomment the next line)
+\definecolor{c_non}{RGB}{121, 133, 155}
+\definecolor{c_sin}{RGB}{247, 141, 184}
+\definecolor{c_mul}{RGB}{255, 204, 102}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+  language=python,
+  aboveskip=1mm,
+  belowskip=1mm,
+  captionpos=b,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\footnotesize\ttfamily},
+  numbers= left,
+  numbersep=5pt,
+  numberstyle=\footnotesize\ttfamily\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  frame=single,
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=2,
+  xleftmargin=\parindent,
+  emptylines = *0,
+}
+\newcommand{\code}[1]{\lstinline|#1|}
+\renewcommand{\lstlistingname}{Code}
+
+\theoremstyle{defn}
+\newtheorem{defn}{Definition}[chapter]
+\newtheorem{emp}{Example}[chapter]
+
+\newcommand{\bv}[1]{\boldsymbol{#1}}
+
+%\include{mymacros}
+
+\title{Ontology-based Visual Analytics \\[1ex]     %your thesis title,
+        For Text Analysis}   %note \\[1ex] is a line break in the title
+
+\author{Tianwei Dong}             %your name
+\college{Green Templeton College}  %your college
+
+%\renewcommand{\submittedtext}{change the default text here if needed}
+\degree{Master in Computer Science}     %the degree
+\degreedate{Trinity 2015}         %the degree date
+
+%end the preamble and start the document
+\begin{document}
+
+%this baselineskip gives sufficient line spacing for an examiner to easily
+%markup the thesis with comments
+\baselineskip=18pt plus1pt
+
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+
+\maketitle                  % create a title page from the preamble info
+\include{dedication}        % include a dedication.tex file
+\include{acknowlegements}   % include an acknowledgements.tex file
+\include{abstract}          % include the abstract
+
+\begin{romanpages}          % start roman page numbering
+\tableofcontents            % generate and include a table of contents
+\listoffigures              % generate and include a list of figures
+\end{romanpages}            % end roman page numbering
+
+%now include the files of latex for each of the chapters etc
+\include{1-introduction}
+\include{2-background}
+\include{3-problem_statement_and_solution}
+\include{4-webpage_classification}
+\include{5-information_extraction}
+\include{6-further_study_and_conclusion}
+
+%now enable appendix numbering format and include any appendices
+\appendix
+\include{appendix1}
+\include{appendix2}
+\include{appendix3}
+\include{appendix4}
+
+%next line adds the Bibliography to the contents page
+\addcontentsline{toc}{chapter}{Bibliography}
+%uncomment next line to change bibliography name to references
+%\renewcommand{\bibname}{References}
+\nocite{*}
+\bibliography{refs}        %use a bibtex bibliography file refs.bib
+\bibliographystyle{plain}  %use the plain bibliography style
+
+\end{document}
+
+
+

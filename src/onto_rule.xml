@@ -1,0 +1,8 @@
+<rule description="[cs.ox.ac.uk]" id="1" on="content">
+  <scope sel="" target="html"/>
+  <substring after="Abstract" before="&lt;/p&gt;"/>
+  <actions>
+   <action id="1"/>
+   <action id="2"/>
+  </actions>
+</rule>

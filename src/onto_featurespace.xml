@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Judge whether a page is seminar page-->
+<!DOCTYPE featurespace PUBLIC "Seminar"
+        "http://static.ileodo.com/s/mscproject/judge.dtd">
+<featurespace name="seminarpages" version="1.0">
+    <feature ... />
+    <feature ... />
+    ...
+</featurespace>

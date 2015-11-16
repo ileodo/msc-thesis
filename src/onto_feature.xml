@@ -1,0 +1,7 @@
+<feature id="fl_10"
+         name="#ratio:text[LOCATION/TIME]"
+         description="ratio between LOCATION and TIME entities"
+         policy="div">
+    <list policy="sum">location.ent</list>
+    <list policy="sum">datetime.ent</list>
+</feature>

@@ -1,0 +1,33 @@
+\chapter{Further Study and Conclusion}\label{chapter:con}
+
+\section{Limitation}
+Because of the time limitation and the width of the project scope, we still did not do well enough in some aspects. For instance, as our system relies on relational database, currently extracting ontology is only suitable for one-to-many(one entity corresponds to many attributes) simple structured data. This does not work when some complex structured data get involved. In addition, though our solution shows satisfying results when dealing with text and webpage, we did not have enough time to come down to more text formats such as PDF.
+
+\section{Further Study}
+The future development project is believed to have a good prospect. There are several directions and aspects that might be worth considering:
+\begin{enumerate}
+  \item As the system is based on ontology, this project can be promoted to other fields by modifying the ontology to adjust different fields. For example, the broader event information, music catalog and journal articles.
+  \item At present, our system is only able to extract simple structured things. If combined with Non-SQL database and develop more complex Extract Ontology, we can progress the entire system into a tool, which could be used to build semantic web semi-automatically by adding the semantic information part to the original webpage. It will contribute significantly to the development of semantic web.
+  \item On the other hand, we could provide more information dimensions on each visualisation element which assists us through the whole extracting process.
+  \item Furthermore, studying how to merge the extraction rules that shares many common traits is also a research direction. Because among real human interactions, there could exist a few different rules which can be combined into a super rule. Thus, how to do the combination is also a research orientation.
+  \item Currently, the solution to our Information Extraction is simply using ontology. It achieved semi-automation under the help of visual analytics. Though the accuracy is high, there still has room to improve degree of automation. If combine the ontology with other text analysis techniques such as natural language processing, the automation degree of information extraction might be improved.
+
+\end{enumerate}
+
+\section{Conclusion}
+This essay proposed a brand new text analysis pipeline: Ontology-based Visual Analytics For Text Analysis. The technology of machine learning, ontology and visual analytics was used to automatically filter out target information, semi-automatically extract attribute of target information from mass webpages, then do reasonably visualise the extracted structured data. We used the seminar announcement webpages in Oxford as an example to explain this pipeline in detail. The knowledge this project applied covers widely, including both practical knowledge from webpage crawler to web application, and theoretical knowledge such as ontology, machine learning and visual analytics.
+
+This pipeline contains several phases and we realised it by implementing a feasible multi agent system.
+\begin{enumerate}
+	\item Firstly, a customisable intelligent crawler is implemented to retrieve all webpages in the website of University of Oxford.
+	\item Secondly, with the help of a well designed feature extract ontology, we implemented an automatic filter to pick up all seminar announcement pages by decision tree classifier. We introduced the visual analytic and human interaction into the active learning, in order to increase the accuracy of the classifier. Our filter reached an accuracy of above 85\% in the experiment.
+	\item Thirdly, we designed a robust extraction ontology with high extensibility. A visual-aid extraction rule generation mechanism is implemented to help the user finish the information extraction semi-automatically. 
+	\item Lastly, we implemented a visualisation for demonstration the extracted seminar announcement information in a calendar view.
+\end{enumerate}
+Additionally, in order to conduct the experiment on our classifier, we create a dataset(OXSEM) for seminar announcement webpage in University of Oxford. This might be helpful for others further study.
+
+Machine learning, visual analytics and human interaction were combined together throughout the whole project. We not only made use of the efficiency of machine learning, but also increased its accuracy. This cooperation makes the system reach a high level of deliverability. Furthermore, ontology technicals make the whole pipeline flexible and be able to migrate to other fields.
+
+In general, the solution and pipeline mentioned in this dissertation developed a new idea of combining machine learning with visual analytics. It could be used for further research and will contribute significantly to the development of semantic web.
+
+

@@ -1,0 +1,174 @@
+\chapter{Background}\label{chapter:bg}
+The problem stated above is extremely complicated. It is a systematic engineering which involves several involuted and independent research topics, such as webpage classification, information extraction and webpage annotation. In this chapter, a literature review of related research areas will be given at beginning, then we will provide some existing related methods and their disadvantages.
+
+\section{Literature Review}
+\subsection{Semantic Web}
+20 years ago, the World Wide Web was invented to be used as a web of documents. However, as the change of the time, the data inside the documents are receiving more attentions. The purpose of the Semantic Web is building a kind of web which connecting all the data in a relational structure rather than simply a pile of unrelated documents\cite{shadbolt2006semantic}. The occurrence of Semantic Web makes the human be able to focus on the raw data instead of the mess and various web page documents\cite{berners2001semantic,shadbolt2006semantic}.
+
+The semantic web is now regarded as an extension of the Web through standards by the World Wide Web Consortium (W3C). This is considered as next generation of web by Tim Berners-Lee, the inventor of the Semantic Web. According to the W3C and Tim Berners-Lee, "The Semantic Web provides a common framework that allows data to be shared and reused across application, enterprise, and community boundaries". It promotes common data formats and exchange protocols on the Web, most fundamentally the Resource Description Framework (RDF)\cite{berners2001semantic}. 
+
+According to Berners-Lee, the Semantic Web normally have the following components: data resources, links among data and relative tools\cite{berners1998semantic}. Compared with the Semantic Web, the traditional World Wide Web do not have a mechanism to process data. It is the obstacle when transferring from traditional Web Wide Web to Semantic Web era. Today, most of the content on the internet has not been structured into semantic information. Meanwhile, according to Marshall and Shipman, much knowledge's tacit and changing nature  adds to the knowledge engineering problem, and also limits the applicability of the Semantic Web to specific domains\cite{marshall2003semantic}. That is where our project becomes meaningful. 
+
+On the other hand, the purpose of building semantic web is making the linked data on the internet be easily extractable. If we are able to develop a technique which can extract required information in the webpage automatically, the problem will be solved.
+
+\subsection{Ontology}
+The word ``ontology'' is used in different communities with different meanings. Here we are talking about Ontology in the knowledge engineering community. At early stages, the computational ontologies are defined as ``explicit specifications of conceptualisations''. Guarino1, Oberle and Staab gave us a clarified definition: they are a method of modelling the structure of a system by means of its entities and the relationships between the entities. Formally, they are considered as ``concepts''(i.e. taxonomy) and ``relations''\cite{guarino2009ontology}.
+
+An ontology is a formal definition and naming of the types, properties and interrelationships of the entities that fundamentally exist for a particular domain of discourse. It compartmentalises the variables needed for some set of computations and establishes the relationships between them\cite{Gruber:1993:TAP:173743.173747}. It could be considered as a graph of relationships between entities and a kind of specification mechanism\cite{maedche2002ontology}.
+
+Currently, there exists many ontology representation languages, including, but not limited to: Description Logics(DL), Resource Description Framework(RDF) and Web Ontology Language(OWL). Meanwhile, there are also many infrastructures for ontologies, such as RDF storage and retrieval systems, tableau-based reasoning and ontology mapping\cite{staab2013handbook}.
+
+\begin{enumerate}
+\item \textbf{Web Ontology Language(OWL)}\\
+OWL is a language which describes the relation of knowledge in the Web, especially Semantic Web. It has several different sublanguages: OWL Lite, OWL DL and OWL Full\cite{maedche2002ontology}.
+
+\item \textbf{Domain Ontology}\\
+A domain ontology aims to eliminate (or reduce) the terminological and conceptual confusion among the members of a virtual community of users who need to share a variety of information\cite{Navigli:2004:LDO:1105710.1105712}.
+
+\item \textbf{Ontology Mapping}\\
+Ontology mapping provides a common layer where several ontologies could be accessed and semantically exchange information\cite{Kalfoglou:2003:OMS:975027.975028}.
+\end{enumerate}
+
+\subsection{Webpage Classification}
+Web page classification is usually a system that automatically classifies web pages into meaningful categories. There are two types of web page classifications: genre based and subject based classifications. 
+
+Classification is normally conducted as a supervised learning problem \cite{joachims1997webwatcher}. A set of pre-labeled data is used to train the classifier model, then apply this model to label the other data which need be classified. For information retrieval tasks, classification of Web content is regarded as an important phase.
+
+It uses the state of the art techniques and subsystems to develop automatic web page classification systems, including web page representations, dimensionality reductions, Web page classifiers, and evaluation of Web page classifiers. This kind of systems are essential tools for Web Mining as well as the future of the Semantic Web\cite{choi2005web}.
+
+The classifier for Web page classifiation should concern about more features than text classification, because Web page is a kind of rich text \cite{Qi:2009:WPC:1459352.1459357,joachims1997webwatcher}. Some related attributes, such as HTML tags and URLs, can be involved in the classification process. We will give a brief introduction on some Web page classification techniques in Section \ref{sec:related_methods}.
+
+\subsection{Information Extraction}
+Information extraction means to extract the structured data out from unstructured or semi-structured data automatically, and then transform it into a machine readable format\cite{Cowie:1996:IE:234173.234209}. Typical subtasks of information extraction that we are going to focus on includes: named entity extraction, semi-structured information extraction, and language and vocabulary analysis.
+
+There are two types of information extraction tools\cite{chang2006survey}: 
+	\begin{enumerate*}[label=\textit{(\arabic*)}]
+		\item finite-state tools, which is based on automata and fixed rules. For example, STALKER and WIEN.
+		\item relational learning tools, which is based on logic programs likes Prolog. For example, Pinocchio, SRV and WebFoot\cite{soderland1997learning,ciravegna2000learning}.
+	\end{enumerate*}
+
+In terms of traditional Web pages, as they are designed differently and do not use structured data schema(such as RDFS), it is very complex and time consuming if we want to automatically extract the data in a web page which is related to the required target. There are also several existing information extraction techniques to solve these problems. They will be introduced in Section \ref{sec:related_methods}.
+
+\subsection{Webpage Annotation}
+Long time ago, human beings knew how to use marginal annotations on some part of a text for highlighting purpose. Text Annotation uses highlights, underlines, footnotes and tags etc. as tools to attract reader's attention\cite{shabajee2003annotation}. Web-based text annotation systems allow users to produce marginal annotations with threaded discussions through a simple web browser. Modern web-based text annotation system is a collaborative software that is able to realise text editing and versioning functionality, as well as annotation and commenting interfaces\cite{lebow2009new}. 
+
+A web annotation refers to an online system which is linked to an Internet resource, mostly a web page. Having such a system, a user do not need to alter the resource itself while adding, modifying or removing information from a web resource. It is similar to a layer, usually visible, covering the existing resource. Other users, who share the same annotation system, also have access to it.
+
+Web annotation can be used as a collaborative tool, such as discussing the contents of a certain resource. It is also able to to quantify transient relationships between information fragments.\\
+
+Besides the above three core topics, there are also some relevant topics and techniques involved in the project. Before we move to current exist methods, we are going to give a brief introduction to the related background knowledge here.
+
+\subsection{Visual Analytics}
+Visual analytics is an outgrowth of information visualisation and scientific visualisation that focuses on analytical reasoning with interactions based on visual interfaces\cite{VisualAnalytics2004}. It can attack certain problems which can be made otherwise intractable by their complexity, size and need. It is a combination of both human and machine analysis. Visual analytics promotes science and technology development in terms of data transformation, analytical reasoning, interaction\cite{tory2004human,VisualAnalytics2004,andrienko2007visual}. They are also representations for analytic reporting, computation and visualisation, and technology transition\cite{VisualAnalytics2004}. It is a combination of several scientific and technical communities including computer science, information visualisation, graphic design, interactive design, cognitive and perceptual sciences, and social sciences.
+
+In addition, visual analytics corporates novel computational and theory-based tools into innovative techniques and visual representations to make human-information discourse viable\cite{VisualAnalytics2004}. There are three principles: cognitive, design and perceptual principles. They are used to govern the design of the techniques and tools\cite{VisualAnalytics2004}. One can develop both tactical and strategic visual analytics technologies for threat analysis, prevention, and response upon the reasoning framework which provided by analytical reasoning\cite{tory2004human,VisualAnalytics2004}. It is the core of the analyst's task of applying human judgements to reach conclusions by combining both evidence and assumptions.
+
+We put the most effort on information visualisation. Information visualisation uses visual representations and interaction techniques to represent abstract data, including both numerical and non-numerical data, to reinforce human cognition\cite{andrienko2007visual}.
+
+Furthermore, visual analytics can be used to assist machine learning process. The result could be much more accurate and reader-friendly when combining these two together. Visual analytics makes humans be able to directly take part in the process of machine learning as well as give fast correction to improve the accuracy of machine learning\cite{andrienko2007visual}.
+
+
+
+\subsection{Decision Tree}
+A decision tree is a tree-like model of decision analysis structure used in decision process\cite{olaru2003complete}. It is a decision support tool. 
+
+In a decision tree, there are three kinds of components: 
+\begin{itemize}
+  \item \textbf{internal node}: represents a ``test" on an attribute;
+  \item \textbf{branch}: represents the outcome of the test
+  \item \textbf{leaf node}: represents a classification label
+\end{itemize}
+Meanwhile, the paths from root to leaf represents the classification rules. Drawn from left to right, a decision tree has only burst nodes but no sink nodes. In other words, a decision tree only splits paths, but never converge paths. Therefore, used manually, they can grow very big and then are often hard to draw fully by hand\cite{olaru2003complete}.
+
+Among decision support tools, decision trees have several advantages\cite{breiman1984classification,quinlan2014c4}:
+\begin{itemize}
+  \item Simple to understand and interpret. Ordinary people can easily understand a decision tree model after a brief explanation;
+  \item Easy to update(optimise) because that it allow human adapted some new scenarios into the model;
+  \item It is a white box model;
+  \item It will still work when the size of data set is small, and human experts can involved their knowledge and preferences into the decision procedure to improve the performance;
+  \item We can involved visual analytics and human interaction, because it can be integrated  with other decision methods.
+\end{itemize}
+
+Particularly, decision tree is much more expressive for a semantic project. On the other hand, it conforms the rules and habits how human beings classify webpages, and therefore more intuitive. 
+
+\begin{figure}[htb!]
+	\centering
+	\Tree
+	[.$f_1>3$
+     	[.$f_2>0$
+     		[.$f_3>5$
+     			[.Class3 ]
+     			[.Class1 ]
+     		]
+     		[.Class2 ]
+     	]
+     	[.$f_3<=8$
+     		[.Class1 ]
+     		[.Class2 ]
+     	]
+     ]
+	\caption{Example of Decision Tree}\label{fig:emp:dtree}
+\end{figure}
+
+\subsection{DOM Tree}
+DOM is short for `Document Object Model'. DOM Tree is the method of using DOM to parse HTML webpages and generate HTML tree structure with the corresponding access method. With the help of DOM Tree, we are able to directly operate on every content markups on HTML pages easily. DOM technology uses a very direct and consistent way to do modelling on the HTML file, and thus provides a simple programming interface for access, navigation and operation page. By using DOM, we can easily access and update not only the content, but also the structure of a web page. This technology is promoted by W3C, therefore, most of the browsers will finally support it.
+
+\begin{figure}[htb!]
+	\centering
+	\Tree
+	[.html
+     	[.head
+     		[.title ]
+     		[.meta ]
+     	]
+     	[.body
+     		[.div
+     			[.span ]
+     			[.p ]
+     			[.p ]
+     		]
+     		[.hr ]
+     		[.div ]
+     	]
+     ]
+	\caption{Example of HTML DOM Tree}\label{fig:emp:html_dom}
+\end{figure}
+
+\subsection{Multi-agent System}
+Multi-agent system can be used to realise the complex functional systems. According to Wooldridge\cite{Wooldridge:2009:IMS:1695886}, ``an agent is a computer system that is capable of independent (autonomous) action on behalf of its user or owner (figuring out what needs to be done to satisfy design objectives, rather than constantly being told).'' A multi-agent system consists of a number of agents that interact with each other. More generally, agents are acting on behalf of users with different motivations and goals\cite{Wooldridge:2009:IMS:1695886}. For the purpose of successful interaction, they are required to have the ability of cooperation, coordination and negotiation with each other, just like people do.
+There are several visions for the usage of a multi-agent system. For example, it is time-consuming and tedious to search the Internet for the answer to a specific query. So an idea could easily come up: using a computer program - an internet agent - to do searches for us.
+
+\section{Current Related Methods}\label{sec:related_methods}
+Recent decades, there have been some related research and applications in the areas of webpage classification, information extraction and webpage annotation. We will give a brief review of them in chronological order.
+
+\subsection{Webpage Classification}
+In 2001, Tsukada, Washio and Motoda tried to automatic Web-page classification based upon machine learning techniques. They proposed methods to generate attributes by using co-occurrence analysis and to automatically classify Web-page through machine learning\cite{tsukada2001automatic}. 
+
+In 2006, Kan and Thi chose to use only the uniform resource locator (URL) to do web page classification. They segment the URL into meaningful chunks and adds component, orthographic and sequential features to model salient patterns\cite{kan2005fast}. Then, in 2009, Qi and Davison raised the idea of using features provided by the interconnected nature of hypertext to do classification\cite{Qi:2009:WPC:1459352.1459357}.
+
+As a probabilistic classifier, Naive Bayes Classifier is the most used classifier in this kind of text classification tasks\cite{cichosznaive}. By calculating the probability that a pattern $p$ is a instance of class $c$ under the data observation $o$(i.e. $\Pr(c\vert p)$), each data entity in the training data set are used to estimate the parameters of the model. When testing, $\Pr(p\vert c)$ denotes the probability that a given data with pattern $p$ belongs to a specific class $c$.
+
+There is also a SVM(Support Vector Machine) based classifiers. Under the fact that SVM have an excellent performance in classification\cite{tong2002support}, it is a idea classifier for Webpage classification with the help of kernel and margin.
+
+
+\subsection{Information Extraction}
+In 1999, Stephen Soderland produced an information extraction application called WHISK which is able to learn text extraction rules automatically to handle semi-structured text styles ranging from highly structured to free text\cite{soderland1999learning}. Meanwhile, Finkel, Grenager, and Manning chose to do extraction by modelling non-local structure instead of the various Markov Models. They use Gibbs Sampling to incorporate non-local structure while preserving tractable inference\cite{finkel2005incorporating}. 
+
+In 2007, Banko, Cafarella and Soderland et al. brought up the concept of Open Information Extraction from the Web. They introduced a new extraction paradigm called Open Information Extraction (OIE), where the system makes a single data-driven pass over its corpus and extracts a large set of relational tuples with no human input. They also gave an example of OIE called TextRunner, in which the tuples are assigned with probabilities and indexed to support extraction via user queries\cite{banko2007open}.
+
+\subsection{Webpage Annotation}
+In 2002, Yee implemented a set of hypertext linking features called “CritLink” to enable public annotation on the web\cite{yee2002critlink}. On the same year, Kahan, José, et al. proposed an open RDF infrastructure for shared web annotations. They combined RDF with XPointer, XLink and HTTP to implement a web-based shared annotation system called `Annotea', where annotations are modelled as a class of metadata\cite{kahan2002annotea}.
+
+\section{Weakness}
+There are several disadvantages if we use these methods to solve the problem we introduced above.
+
+First of all, these methods heavily bias on pure automation and machine learning. This kinds of practical problem requires an extremely extremely high rate of correctness. For example, fully automatic webpage classification cannot assure even 80\% accuracy by using current technology. However, these existing solutions could not perform very well. Because fully automatic programs are not able to cover all the sub tasks in this project. In other words, no human interaction during the whole process of this job may not applicable at this moment.
+
+Secondly, even if we apply these current solutions to our problem without concerning the accuracy, each solution is only able to solve a small part of this big problem. In addition, each part alone is already been a complex issue. For example, information extraction from unstructured and changing webpages has been a well-known public challenge so far. And this project combines these small parts together to form a semi-automatic system, which makes the problem become even more troublesome and complicated.
+
+Furthermore, most current techniques for information extraction are focusing on dealing with pure text. But in our mission, the targets are webpages instead of text documents. Their methods do not fully consider or use the characteristics of html webpages and http response header. On the other hand, most of today's solutions to this problem are dealing with structured or semi-structured data, whereas most data on the internet is in unstructured layout. This makes the problem becomes exponentially harder to solve.
+
+
+
+
+
